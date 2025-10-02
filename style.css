@@ -163,17 +163,75 @@ section {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertically center content */
-  align-items: center; /* horizontally center content */
+  justify-content: center; /* vertical centering */
+  align-items: center; /* horizontal centering */
   text-align: center;
-  gap: 20px; /* space between lines/buttons */
+  gap: 40px; /* space between lines/buttons */
+  overflow: hidden; /* hide text moving outside */
 }
 
 /* Welcome text lines */
 .welcome-line {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 4rem; /* bigger text */
+  font-weight: 700;
+  white-space: nowrap; /* keep text in one line */
 }
+
+/* Buttons container */
+.welcome-buttons {
+  display: flex;
+  gap: 20px; /* space between buttons */
+}
+
+/* Buttons styling with floating animation */
+.floating-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff7f50;
+  text-decoration: none;
+  border: 3px solid #ff7f50;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+
+  animation: float 2s ease-in-out infinite; /* floating effect */
+}
+
+.explore-btn {
+  animation-delay: 0s;
+}
+
+.about-btn {
+  animation-delay: 0.3s;
+}
+
+.floating-btn:hover {
+  background-color: #ff7f50;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Floating keyframes */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Move text left to right */
+.move-text {
+  position: relative;
+  animation: slide 10s linear infinite alternate;
+}
+
+@keyframes slide {
+  0% { left: -50px; }
+  50% { left: 50px; }
+  100% { left: -50px; }
+}
+
 
 /* Buttons container */
 .welcome-buttons {
