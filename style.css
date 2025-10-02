@@ -157,7 +157,7 @@ section {
   object-fit: cover;
 }
 
-/* Welcome section container */
+/* Make the welcome section cover full screen */
 #welcome {
   position: relative;
   height: 100vh;
@@ -172,6 +172,15 @@ section {
   background-position: center;
   animation: bgChange 15s infinite; /* cycle through images */
 }
+
+/* Background image animation */
+@keyframes bgChange {
+  0% { background-image: url('images/IMG_0398.JPG'); }
+  33% { background-image: url('images/IMG_0486.JPG'); }
+  66% { background-image: url('images/IMG_8982.JPG'); }
+  100% { background-image: url('images/itwsfl.png'); }
+}
+
 
 /* Welcome text lines */
 .welcome-line {
@@ -334,10 +343,4 @@ html {
   color: #fff;
   transform: translateY(-3px); /* small hover lift */
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-}
-/* Background image animation */
-@keyframes bgChange {
-  0% { background-image: url('images/IMG_0398.JPG'); }
-  33% { background-image: url('images/IMG_8982.JPG'); }
-  66% { background-image: url('images/IMG_0486.JPG }
 }
