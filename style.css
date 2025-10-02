@@ -162,37 +162,44 @@ section {
   position: relative;
   height: 100vh; /* full viewport height */
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  text-align: center; /* center text */
+  justify-content: flex-start; /* align items from top */
+  align-items: center; /* center horizontally */
+  text-align: center;
+  padding-top: 25vh; /* push welcome text slightly higher */
+}
+
+/* Welcome text */
+.welcome {
+  font-size: 2rem;
+  margin-bottom: 40px; /* space between text and buttons */
 }
 
 /* Buttons styling */
 .floating-btn {
   display: inline-block;
-  margin: 15px 10px; /* space between buttons */
-  padding: 15px 40px; /* bigger button */
+  margin: 10px; /* space between the two buttons */
+  padding: 15px 40px; /* bigger button size */
   font-size: 1.5rem; /* bigger text */
   font-weight: 600;
   color: #ff7f50; /* outline color */
   text-decoration: none;
-  border: 3px solid #ff7f50; /* outline */
+  border: 3px solid #ff7f50; /* outline style */
   border-radius: 50px; /* rounded rectangle */
   transition: all 0.3s ease;
 }
 
 /* Hover effect */
 .floating-btn:hover {
-  background-color: #ff7f50; /* fill on hover */
+  background-color: #ff7f50;
   color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* Center buttons below welcome text */
+/* Buttons flow naturally below text */
 .explore-btn, .about-btn {
-  position: relative; /* they flow naturally below text */
+  position: relative;
 }
 
 
