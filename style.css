@@ -157,18 +157,27 @@ section {
   object-fit: cover;
 }
 
-/* Floating buttons styling */
+/* Make the welcome section a relative container */
+#welcome {
+  position: relative;
+  height: 100vh; /* full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Floating buttons inside the welcome section */
 .floating-btn {
-  position: fixed; /* stays in viewport */
+  position: absolute; /* position relative to #welcome */
   padding: 12px 24px;
-  background-color: #ff7f50; /* you can change the color */
+  background-color: #ff7f50;
   color: #fff;
   text-decoration: none;
   border-radius: 30px;
   font-weight: 600;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
-  z-index: 1000;
 }
 
 .floating-btn:hover {
@@ -176,16 +185,19 @@ section {
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* Position buttons */
+/* Position buttons within the welcome section */
 .explore-btn {
-  bottom: 30px;
-  left: 30px;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-60%); /* slightly left of center */
 }
 
 .about-btn {
-  bottom: 30px;
-  right: 30px;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(10%); /* slightly right of center */
 }
+
 
 /* Smooth scroll effect */
 html {
