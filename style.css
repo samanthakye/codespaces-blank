@@ -160,26 +160,21 @@ section {
 /* Make the welcome section cover full screen */
 #welcome {
   position: relative;
-  height: 100vh;
+  height: 100vh; /* full viewport height */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* center content vertically */
+  align-items: center; /* center content horizontally */
   text-align: center;
-  gap: 40px;
+  gap: 40px; /* space between text/buttons */
   overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  animation: bgChange 15s infinite steps(1); /* instant switch */
+
+  background-image: url('images/Screenshot\ 2025-04-01\ at\ 2.41.36\ PM.png'); /* your static image */
+  background-size: cover; /* cover the entire section */
+  background-position: center; /* center the image */
+  background-repeat: no-repeat; /* prevent tiling */
 }
 
-/* Background image animation */
-@keyframes bgChange {
-  0% { background-image: url('images/IMG_0398.JPG'); }
-  33% { background-image: url('images/IMG_0486.JPG'); }
-  66% { background-image: url('images/IMG_8982.JPG'); }
-  100% { background-image: url('images/Screenshot\ 2025-04-01\ at\ 2.41.36\ PM.png'); }
-}
 
 
 /* Welcome text lines */
