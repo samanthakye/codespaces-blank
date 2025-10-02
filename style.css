@@ -69,11 +69,6 @@ section {
   50% { transform: translateY(-15px); }
 }
 
-/* About */
-.about {
-  font-size: 1.25rem;
-  max-width: 800px;
-}
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* exactly 2 per row */
@@ -136,10 +131,30 @@ section {
   transform: scale(1.05) translateY(-5px);
 }
 
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.about-text {
+  flex: 2;
+}
+
+.about-photo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .about-photo img {
-  width: 120px;      /* fixed size like a profile */
-  height: 120px;     /* ensures it’s square */
-  object-fit: cover; /* crops the image nicely */
-  border-radius: 50%; /* makes it circular, like a profile photo */
+  width: 250px;   /* adjust size: 200px–300px works well */
+  height: auto;
+  border-radius: 50%; /* makes it circular (optional) */
+  object-fit: cover;
 }
 
