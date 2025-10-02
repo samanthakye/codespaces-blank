@@ -160,42 +160,64 @@ section {
 /* Welcome section container */
 #welcome {
   position: relative;
-  height: 100vh; /* full viewport height */
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* align items from top */
-  align-items: center; /* center horizontally */
+  justify-content: center; /* vertically center content */
+  align-items: center; /* horizontally center content */
   text-align: center;
-  padding-top: 25vh; /* push welcome text slightly higher */
+  gap: 20px; /* space between lines/buttons */
 }
 
-/* Welcome text */
-.welcome {
-  font-size: 2rem;
-  margin-bottom: 40px; /* space between text and buttons */
+/* Welcome text lines */
+.welcome-line {
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
-/* Buttons styling */
+/* Buttons container */
+.welcome-buttons {
+  display: flex;
+  gap: 20px; /* space between buttons */
+}
+
+/* Buttons styling with floating animation */
 .floating-btn {
   display: inline-block;
-  margin: 10px; /* space between the two buttons */
-  padding: 15px 40px; /* bigger button size */
-  font-size: 1.5rem; /* bigger text */
+  padding: 15px 40px;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: #ff7f50; /* outline color */
+  color: #ff7f50;
   text-decoration: none;
-  border: 3px solid #ff7f50; /* outline style */
-  border-radius: 50px; /* rounded rectangle */
+  border: 3px solid #ff7f50;
+  border-radius: 50px;
   transition: all 0.3s ease;
+
+  animation: float 2s ease-in-out infinite; /* floating effect */
 }
 
-/* Hover effect */
+.explore-btn {
+  animation-delay: 0s;
+}
+
+.about-btn {
+  animation-delay: 0.3s;
+}
+
 .floating-btn:hover {
   background-color: #ff7f50;
   color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
+/* Floating keyframes */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
 
 /* Buttons flow naturally below text */
 .explore-btn, .about-btn {
