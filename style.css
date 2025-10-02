@@ -152,9 +152,8 @@ section {
 }
 
 .about-photo img {
-  width: 250px;   /* adjust size: 200px–300px works well */
+  width: 500px;   /* adjust size: 200px–300px works well */
   height: auto;
-  border-radius: 50%; /* makes it circular (optional) */
   object-fit: cover;
 }
 
