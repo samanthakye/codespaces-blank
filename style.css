@@ -78,23 +78,27 @@ section {
 /* Portfolio */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* bigger min size */
+  gap: 2rem;            /* more space between items */
   width: 100%;
-  max-width: 1400px;
+  max-width: 1400px;    /* allow grid to expand wider */
   margin: auto;
 }
 
+
 .portfolio-grid img {
-  width: 100%;
-  object-fit: cover;
+  width: 100%;         /* fill its grid cell */
+  height: auto;        /* keep proportions */
+  object-fit: cover;   /* avoids stretching */
   border: 1px solid #eee;
+  animation: wiggle 4s ease-in-out infinite;
   transition: transform 0.3s ease;
 }
 
 .portfolio-grid img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(-5px);
 }
+
 /* Wiggle / Floating Animation */
 @keyframes wiggle {
   0%, 100% {
@@ -120,8 +124,9 @@ section {
 }
 
 .about-photo img {
-  width: 150px;   /* smaller fixed size */
-  max-width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
+  width: 120px;      /* fixed size like a profile */
+  height: 120px;     /* ensures it’s square */
+  object-fit: cover; /* crops the image nicely */
+  border-radius: 50%; /* makes it circular, like a profile photo */
 }
+
