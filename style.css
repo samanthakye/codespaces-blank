@@ -163,11 +163,14 @@ section {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical centering */
-  align-items: center; /* horizontal centering */
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  gap: 40px; /* space between lines/buttons */
-  overflow: hidden; /* hide text moving outside */
+  gap: 40px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  animation: bgChange 15s infinite; /* cycle through images */
 }
 
 /* Welcome text lines */
@@ -331,4 +334,10 @@ html {
   color: #fff;
   transform: translateY(-3px); /* small hover lift */
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+/* Background image animation */
+@keyframes bgChange {
+  0% { background-image: url('images/IMG_0398.JPG'); }
+  33% { background-image: url('images/IMG_8982.JPG'); }
+  66% { background-image: url('images/IMG_0486.JPG }
 }
