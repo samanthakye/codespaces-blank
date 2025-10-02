@@ -170,7 +170,7 @@ section {
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  animation: bgChange 15s infinite; /* cycle through images */
+  animation: bgChange 15s infinite steps(1); /* instant switch */
 }
 
 /* Background image animation */
@@ -178,7 +178,7 @@ section {
   0% { background-image: url('images/IMG_0398.JPG'); }
   33% { background-image: url('images/IMG_0486.JPG'); }
   66% { background-image: url('images/IMG_8982.JPG'); }
-  100% { background-image: url('images/itwsfl.png'); }
+  100% { background-image: url('images/Screenshot\ 2025-04-01\ at\ 2.41.36\ PM.png'); }
 }
 
 
