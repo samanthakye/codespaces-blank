@@ -157,3 +157,37 @@ section {
   object-fit: cover;
 }
 
+/* Floating buttons styling */
+.floating-btn {
+  position: fixed; /* stays in viewport */
+  padding: 12px 24px;
+  background-color: #ff7f50; /* you can change the color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.floating-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Position buttons */
+.explore-btn {
+  bottom: 30px;
+  left: 30px;
+}
+
+.about-btn {
+  bottom: 30px;
+  right: 30px;
+}
+
+/* Smooth scroll effect */
+html {
+  scroll-behavior: smooth;
+}
