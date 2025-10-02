@@ -157,7 +157,7 @@ section {
   object-fit: cover;
 }
 
-/* Make the welcome section a relative container */
+/* Welcome section container */
 #welcome {
   position: relative;
   height: 100vh; /* full viewport height */
@@ -165,37 +165,34 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center; /* center text */
 }
 
-/* Floating buttons inside the welcome section */
+/* Buttons styling */
 .floating-btn {
-  position: absolute; /* position relative to #welcome */
-  padding: 12px 24px;
-  background-color: #ff7f50;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
+  display: inline-block;
+  margin: 15px 10px; /* space between buttons */
+  padding: 15px 40px; /* bigger button */
+  font-size: 1.5rem; /* bigger text */
   font-weight: 600;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  color: #ff7f50; /* outline color */
+  text-decoration: none;
+  border: 3px solid #ff7f50; /* outline */
+  border-radius: 50px; /* rounded rectangle */
   transition: all 0.3s ease;
 }
 
+/* Hover effect */
 .floating-btn:hover {
+  background-color: #ff7f50; /* fill on hover */
+  color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* Position buttons within the welcome section */
-.explore-btn {
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-60%); /* slightly left of center */
-}
-
-.about-btn {
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(10%); /* slightly right of center */
+/* Center buttons below welcome text */
+.explore-btn, .about-btn {
+  position: relative; /* they flow naturally below text */
 }
 
 
