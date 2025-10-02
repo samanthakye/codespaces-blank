@@ -207,3 +207,48 @@ section {
 html {
   scroll-behavior: smooth;
 }
+/* Keyframes for floating effect */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* float up */
+  }
+  100% {
+    transform: translateY(0); /* back to start */
+  }
+}
+
+/* Apply animation to buttons */
+.floating-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff7f50;
+  text-decoration: none;
+  border: 3px solid #ff7f50;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+
+  /* Floating animation */
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Optional: stagger animations slightly */
+.explore-btn {
+  animation-delay: 0s;
+}
+.about-btn {
+  animation-delay: 0.3s;
+}
+
+/* Hover effect */
+.floating-btn:hover {
+  background-color: #ff7f50;
+  color: #fff;
+  transform: translateY(-3px); /* small hover lift */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
