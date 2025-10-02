@@ -157,37 +157,49 @@ section {
   object-fit: cover;
 }
 
-/* Make the welcome section cover full screen */
+/* Welcome section with static background */
 #welcome {
   position: relative;
-  height: 100vh; /* full viewport height */
+  height: 100vh;
+  background-image: url('images/bg1.jpg'); /* your static image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* center content vertically */
-  align-items: center; /* center content horizontally */
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  gap: 40px; /* space between text/buttons */
   overflow: hidden;
-
-  background-image: url('images/Screenshot\ 2025-04-01\ at\ 2.41.36\ PM.png'); /* your static image */
-  background-size: cover; /* cover the entire section */
-  background-position: center; /* center the image */
-  background-repeat: no-repeat; /* prevent tiling */
 }
 
+/* Overlay layer */
+.welcome-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* black overlay at 40% opacity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  color: #fff; /* ensures text is visible */
+  z-index: 1;
+}
 
-
-/* Welcome text lines */
+/* Make text bigger */
 .welcome-line {
-  font-size: 4rem; /* bigger text */
+  font-size: 4rem;
   font-weight: 700;
-  white-space: nowrap; /* keep text in one line */
 }
 
 /* Buttons container */
 .welcome-buttons {
   display: flex;
-  gap: 20px; /* space between buttons */
+  gap: 20px;
+  z-index: 2; /* on top of overlay */
 }
 
 /* Buttons styling with floating animation */
@@ -201,17 +213,11 @@ section {
   border: 3px solid #ff7f50;
   border-radius: 50px;
   transition: all 0.3s ease;
-
   animation: float 2s ease-in-out infinite; /* floating effect */
 }
 
-.explore-btn {
-  animation-delay: 0s;
-}
-
-.about-btn {
-  animation-delay: 0.3s;
-}
+.explore-btn { animation-delay: 0s; }
+.about-btn { animation-delay: 0.3s; }
 
 .floating-btn:hover {
   background-color: #ff7f50;
@@ -226,6 +232,7 @@ section {
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
+
 
 /* Move text left to right */
 .move-text {
