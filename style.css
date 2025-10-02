@@ -95,3 +95,26 @@ section {
 .portfolio-grid img:hover {
   transform: scale(1.05);
 }
+/* Wiggle / Floating Animation */
+@keyframes wiggle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Apply to portfolio images */
+.portfolio-grid img {
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid #eee;
+  animation: wiggle 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+/* Make hover slightly stronger */
+.portfolio-grid img:hover {
+  transform: scale(1.05) translateY(-5px);
+}
